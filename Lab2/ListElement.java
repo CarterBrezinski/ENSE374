@@ -26,6 +26,7 @@ public class ListElement
 	{
 		return this.data;
 	}
+
 	/*
 	public void remove(int data)
 	{
@@ -35,21 +36,21 @@ public class ListElement
 		
 	}
 	*/
+
 	public void addElement(ListElement le)
 	{	
 		//Traverse all the way to the tail, then add:
-		while (this.next != null)
+		
+		while (next != null)
 		{
-			next = this.next;
+			
+		next = next.next;	 
 		}
 		next = le;
 	}
 	
-	public void print()
+	public void printList()
 	{
-		//Printing the linked list one by one from head -> tail
-		
+		System.out.println("made it here");
 	}
-	
-	
 }
