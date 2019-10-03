@@ -1,3 +1,10 @@
+/*
+NAME: Carter Brezinski
+SID: 200391111
+DATE: 10/3/2019
+ASSIGNMENT: Lab2 - phase1
+*/
+
 public class phase1Test;
 {
 
@@ -14,8 +21,20 @@ main method:
 	{
 	//The following processes will need to be coded:
 	//Creating an object of the class ListElement
+	
+	
+	
 	//Add an element onto the pre-existing LinkedList named 'ListElement'
+	
+	
+	
 	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
+	
+	
+	
 	//Delete an item from the LinkedList 'ListElement'
+	
+	
+	
 	}
 }

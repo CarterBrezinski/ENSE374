@@ -1,3 +1,10 @@
+/*
+NAME: Carter Brezinski
+SID: 200391111
+DATE: 10/3/2019
+ASSIGNMENT: Lab2 - phase1
+*/
+
 public class ListElement
 {
 	private ListElement next;
@@ -19,4 +26,7 @@ public class ListElement
 	{
 		return this.data;
 	}
+	
+	
+	
 }
