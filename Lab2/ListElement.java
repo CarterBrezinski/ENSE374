@@ -26,7 +26,15 @@ public class ListElement
 	{
 		return this.data;
 	}
+	/*
+	public void remove(int data)
+	{
+		
+	}
 	
-	
-	
+	public void addElement(ListElement le)
+	{	
+		
+	}
+	*/
 }

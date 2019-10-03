@@ -21,20 +21,30 @@ main method:
 	{
 	//The following processes will need to be coded:
 	//Creating an object of the class ListElement
+	ListElement object1 = new ListELement;
+	ListElement object2 = new ListELement;
+	ListElement object3 = new ListELement;
+	ListElement object4 = new ListELement;
 	
-	
-	
-	//Add an element onto the pre-existing LinkedList named 'ListElement'
-	
-	
+	//Give a value to each of the individual objects.
+	object1.setData(5);
+	object2.setData(10);
+	object3.setData(15);
+	object4.setData(20);
 	
 	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
+	object1.getData();
+	object2.getData();
+	object3.getData();
+	object4.getData();
+	
+	//Add an element onto the pre-existing LinkedList named 'ListElement
 	
 	
 	
 	//Delete an item from the LinkedList 'ListElement'
 	
-	
-	
+	//Print the linked list from head -> tail
+	System.out.println("");
 	}
 }
