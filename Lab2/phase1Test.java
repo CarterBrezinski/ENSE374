@@ -39,10 +39,12 @@ main method:
 	object4.getData();
 	
 	//Add an element onto the pre-existing LinkedList named 'ListElement
-	
+	object1.addElement(object2)
 	
 	
 	//Delete an item from the LinkedList 'ListElement'
+	
+	
 	
 	//Print the linked list from head -> tail
 	System.out.println("");
