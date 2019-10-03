@@ -40,7 +40,7 @@ public class ListElement
 		//Traverse all the way to the tail, then add:
 		while (this.next != null)
 		{
-			this = this.next;
+			next = this.next;
 		}
 		next = le;
 	}

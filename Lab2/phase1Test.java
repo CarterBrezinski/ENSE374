@@ -5,7 +5,7 @@ DATE: 10/3/2019
 ASSIGNMENT: Lab2 - phase1
 */
 
-public class phase1Test;
+public class phase1Test
 {
 
 /* 
@@ -21,10 +21,10 @@ main method:
 	{
 	//The following processes will need to be coded:
 	//Creating an object of the class ListElement
-	ListElement object1 = new ListELement;
-	ListElement object2 = new ListELement;
-	ListElement object3 = new ListELement;
-	ListElement object4 = new ListELement;
+	ListElement object1 = new ListElement();
+	ListElement object2 = new ListElement();
+	ListElement object3 = new ListElement();
+	ListElement object4 = new ListElement();
 	
 	//Give a value to each of the individual objects.
 	object1.setData(5);
@@ -39,7 +39,7 @@ main method:
 	object4.getData();
 	
 	//Add an element onto the pre-existing LinkedList named 'ListElement
-	object1.addElement(object2)
+	object1.addElement(object2);
 	
 	
 	//Delete an item from the LinkedList 'ListElement'
