@@ -7,7 +7,7 @@ ASSIGNMENT: Lab2 - phase1
 
 public class ListElement
 {
-
+	private ListElement previous;
 	private ListElement next;
 	private int data;
 
@@ -15,7 +15,7 @@ public class ListElement
 	{
 		this.data = 0;
 		this.next = null;
-		//this.previous = null;
+		this.previous = null;
 	}
 
 	//Set the value in the linked list 
