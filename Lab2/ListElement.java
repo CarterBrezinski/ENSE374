@@ -7,6 +7,8 @@ ASSIGNMENT: Lab2 - phase1
 
 public class ListElement
 {
+	ListElement head;
+
 	private ListElement next;
 	private int data;
 
@@ -40,17 +42,36 @@ public class ListElement
 	public void addElement(ListElement le)
 	{	
 		//Traverse all the way to the tail, then add:
-		
-		while (next != null)
+		ListElement pointer = this;
+
+		if (this.next == null)
 		{
-			
-		next = next.next;	 
+			this.next = le;
 		}
-		next = le;
+		else
+		{
+			while (pointer.next != null)
+			{
+			ListElement nextObject = pointer.next;
+			pointer = nextObject;
+			}
+		pointer.next = le;
+		}
 	}
 	
 	public void printList()
 	{
-		System.out.println("made it here");
+		ListElement pointer = this;
+
+		while(pointer.next != null)
+		{
+			System.out.println(pointer.data);
+			ListElement nextObject = pointer.next;
+			pointer = nextObject;
+		}
+		if(pointer.next == null)
+		{
+			System.out.println(pointer.data);
+		}
 	}
 }

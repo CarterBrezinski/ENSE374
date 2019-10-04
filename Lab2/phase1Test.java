@@ -45,9 +45,10 @@ main method:
 	object1.addElement(object4);
 	
 	//Delete an item from the LinkedList 'ListElement'
+	object1.remove(15);
 
 	//Print the linked list from head -> tail
-
 	object1.printList();
+	System.out.println("If done correctly, the linked list should be printed like the following: 5, 10, 20.\n As the 15 was removed. ");
 	}
 }
