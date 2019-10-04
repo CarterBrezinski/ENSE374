@@ -32,20 +32,21 @@ main method:
 	object3.setData(15);
 	object4.setData(20);
 	
-	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
-	ListElement  = object1.retrieve(2);
-	System.out.println("the value contained inside object1 is: " + print1);
-	
 	//Add an element onto the pre-existing LinkedList named 'ListElement
 	object1.addElement(object2);
 	object1.addElement(object3);
 	object1.addElement(object4);
+
+	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
+	ListElement retrivalTest = object1.retrieve(2);
+	System.out.println("Should print the 20 as it is the third position in the array, ie index 2.\n");
+	retrivalTest.printList();
 	
 	//Delete an item from the LinkedList 'ListElement'
 	ListElement newList = object1.remove(2);
 
 	//Print the linked list from head -> tail
 	object1.printList();
-	System.out.println("If done correctly, the linked list should be printed like the following: 5, 10, 20.\n As the 15 was removed. ");
+	System.out.println("If done correctly, the linked list should be printed like the following: 5, 10, 20.\nAs the 15 was removed. ");
 	}
 }

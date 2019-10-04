@@ -29,7 +29,7 @@ public class ListElement
 		return this.data;
 	}
 
-
+	//this is acting as the getElement
 	//Return the value in the linked list at a specific index
 	public ListElement retrieve(int index)
 	{
@@ -49,7 +49,7 @@ public class ListElement
 			nextPointer = nextObject;
 		}
 
-	if(index > counterNodes)
+	if(index > countNodes)
 		{
 			//If the counter that checks through the length of the 
 			//Linked list is less than the index entered
@@ -107,6 +107,7 @@ public class ListElement
 			}
 			pointer.next = nextObject;
 		}
+		return this;
 	}
 
 	public void addElement(ListElement le)
