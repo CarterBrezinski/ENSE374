@@ -37,16 +37,32 @@ main method:
 	object1.addElement(object3);
 	object1.addElement(object4);
 
+	//Print the original linked list from head -> tail
+	System.out.println("Initial print of linked list: ");
+	object1.printList();
+	System.out.println("");
+
 	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
 	ListElement retrivalTest = object1.retrieve(2);
-	System.out.println("Should print the 20 as it is the third position in the array, ie index 2.\n");
+	System.out.println("Should print the 20 as it is the third position in the array, ie index 2.");
 	retrivalTest.printList();
 	System.out.println("");
 	
+	//Print the linked list from head -> tail
+	System.out.println("Printing the list from head to tail, testing print at object 3 to see if it will\nmove back to the head from the middle of the list");
+	object3.printListFromHead();
+	System.out.println("");
+	
+	//Print the linked list from tail -> head
+	System.out.println("Printing the list from tail to head, testing print at object 3 to see if it will\nmove back to the head from the middle of the list");
+	object3.printListFromTail();
+	System.out.println("");
+
 	//Delete an item from the LinkedList 'ListElement'
 	ListElement newList = object1.remove(2);
 
 	//Print the linked list from head -> tail
+	System.out.println("Printing after ListElement removal: ");
 	object1.printList();
 	System.out.println("");
 	System.out.println("If done correctly, the linked list should be printed like the following: 5, 10, 20.\nAs the 15 was removed. ");

@@ -2,7 +2,7 @@
 NAME: Carter Brezinski
 SID: 200391111
 DATE: 10/3/2019
-ASSIGNMENT: Lab2 - phase1
+ASSIGNMENT: Lab2 - phase2
 */
 
 public class ListElement
@@ -29,6 +29,7 @@ public class ListElement
 		return this.data;
 	}
 
+	//include previous
 	//this is acting as the getElement
 	//Return the value in the linked list at a specific index
 	public ListElement retrieve(int index)
@@ -36,8 +37,17 @@ public class ListElement
 		ListElement nextObject;
 		ListElement pointer = this;
 		ListElement nextPointer = this;
+		ListElement previousPointer = this;
+		ListElement previousObject;
 		int counter = 0;
 		int countNodes = 0;
+
+	//need to work way backwards using previous, then go forward
+	while(previousPointer.previous != null)
+		{
+		previousObject = previousPointer.previous;
+		previousPointer = previousObject;
+		} 
 
 		//The purpose of this counter is to count how many 
 		//nodes are present in the linked list, this will
@@ -72,16 +82,26 @@ public class ListElement
 
 	}
 
+	//include previous
 	public ListElement remove(int index)
 	{
 		//if the head, the next in list will become the head	
 		//if the tail, the one before it will become the tail
 		//if in the center, you'll have to link the two on either end
+		ListElement previousObject = this;
+		ListElement previousPointer = this;
 		ListElement nextObject = this;
 		ListElement pointer = this;
 		int counter = 0;
 		int counter2 = 0;
 		
+		//need to work way backwards using previous, then go forward
+		while(previousPointer.previous != null)
+		{
+			previousObject = previousPointer.previous;
+			previousPointer = previousObject;
+		} 
+
 		if(index == 0)
 		{
 			//assign pointer to the next position in the list
@@ -125,6 +145,7 @@ public class ListElement
 		if (this.next == null)
 		{
 			this.next = le;
+			le.previous = this;
 		}
 		else
 		{
@@ -135,10 +156,11 @@ public class ListElement
 			pointer = nextObject;
 			}
 		pointer.next = le;
+		le.previous = pointer;
 		}
 	}
-	
-	//This will go through the necessary steps to print any linked list length.
+
+	//Original printList function, for printing individual values or just printing from original calling point -> tail
 	public void printList()
 	{
 		//set the current linked list to the pointer ListElement.
@@ -159,4 +181,65 @@ public class ListElement
 			System.out.println(pointer.data);
 		}
 	}
+
+	//This will go through the necessary steps to print any linked list length from the tail.
+	public void printListFromTail()
+	{
+		//set the current linked list to the pointer ListElement.
+		ListElement pointer = this;
+		ListElement previousObject = this;
+		ListElement nextObject;
+
+		//work way forwards to the tail
+		while(pointer.next != null)
+		{
+			nextObject = pointer.next;
+			pointer = nextObject;
+		}
+		//while the next value isnt the end of the linked list
+		//it will print the current data value and set the pointer to the 
+		//next available object.
+		while(pointer.previous != null)
+		{
+			System.out.println(pointer.data);
+		 	previousObject = pointer.previous;
+			pointer = previousObject;
+		}
+		//if the next value is null then it will print the current data and finish printing
+		if(pointer.previous == null)
+		{
+			System.out.println(pointer.data);
+		}
+	}
+
+	//This will go through the necessary steps to print any linked list length from the head.
+	public void printListFromHead()
+	{
+		//set the current linked list to the pointer ListElement.
+		ListElement pointer = this;
+		ListElement previousPointer = this;
+		ListElement previousObject = this;
+
+		//work way backwards to the head
+		while(pointer.previous != null)
+		{
+			previousObject = pointer.previous;
+			pointer = previousObject;
+		}
+		//while the next value isnt the end of the linked list
+		//it will print the current data value and set the pointer to the 
+		//next available object.
+		while(pointer.next != null)
+		{
+			System.out.println(pointer.data);
+			ListElement nextObject = pointer.next;
+			pointer = nextObject;
+		}
+		//if the next value is null then it will print the current data and finish printing
+		if(pointer.next == null)
+		{
+			System.out.println(pointer.data);
+		}
+	}
+
 }
