@@ -33,11 +33,8 @@ main method:
 	object4.setData(20);
 	
 	//Retrieve an element from the pre-existing LinkedList named 'ListElement'
-	int print1 = object1.getData();
+	ListElement  = object1.retrieve(2);
 	System.out.println("the value contained inside object1 is: " + print1);
-	object2.getData();
-	object3.getData();
-	object4.getData();
 	
 	//Add an element onto the pre-existing LinkedList named 'ListElement
 	object1.addElement(object2);
@@ -45,7 +42,7 @@ main method:
 	object1.addElement(object4);
 	
 	//Delete an item from the LinkedList 'ListElement'
-	object1.remove(15);
+	ListElement newList = object1.remove(2);
 
 	//Print the linked list from head -> tail
 	object1.printList();
