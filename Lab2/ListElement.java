@@ -93,18 +93,23 @@ public class ListElement
 		//In the linked list, just to stop pointing to it in the list.
 		else
 		{
+			//while the counter is less than the index it will
+			//work towards both ends of the index point, so it can join the gap after
+			//'removing' the node (it never actually removes the node.)
 			while (counter < index)
 			{
 				counter++;
 				pointer = pointer.next;
 				nextObject = pointer.next;
 			}
+			//reset the pointer and move to before the positioning
 			pointer = this;
 			while (counter2 < index-1)
 			{
 				counter2++;
 				pointer = pointer.next;
 			}
+			//merge together.
 			pointer.next = nextObject;
 		}
 		return this;
@@ -112,16 +117,18 @@ public class ListElement
 
 	public void addElement(ListElement le)
 	{	
-		//Traverse all the way to the tail, then add:
+		//Traverse all the way to the tail, then adds:
 		ListElement pointer = this;
 
-		//
+		//if the next position is null, then set the next position as 
+		//the given ListElement.
 		if (this.next == null)
 		{
 			this.next = le;
 		}
 		else
 		{
+			//otherwise it will step through the list until it hits that point.
 			while (pointer.next != null)
 			{
 			ListElement nextObject = pointer.next;
@@ -131,16 +138,22 @@ public class ListElement
 		}
 	}
 	
+	//This will go through the necessary steps to print any linked list length.
 	public void printList()
 	{
+		//set the current linked list to the pointer ListElement.
 		ListElement pointer = this;
 
+		//while the next value isnt the end of the linked list
+		//it will print the current data value and set the pointer to the 
+		//next available object.
 		while(pointer.next != null)
 		{
 			System.out.println(pointer.data);
 			ListElement nextObject = pointer.next;
 			pointer = nextObject;
 		}
+		//if the next value is null then it will print the current data and finish printing
 		if(pointer.next == null)
 		{
 			System.out.println(pointer.data);

@@ -41,12 +41,14 @@ main method:
 	ListElement retrivalTest = object1.retrieve(2);
 	System.out.println("Should print the 20 as it is the third position in the array, ie index 2.\n");
 	retrivalTest.printList();
+	System.out.println("");
 	
 	//Delete an item from the LinkedList 'ListElement'
 	ListElement newList = object1.remove(2);
 
 	//Print the linked list from head -> tail
 	object1.printList();
+	System.out.println("");
 	System.out.println("If done correctly, the linked list should be printed like the following: 5, 10, 20.\nAs the 15 was removed. ");
 	}
 }
